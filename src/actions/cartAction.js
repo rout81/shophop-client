@@ -1,7 +1,9 @@
 import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const response = await fetch(`/api/products/${id}`);
+  const response = await fetch(
+    `https://stark-mesa-45698.herokuapp.com/api/products/${id}`
+  );
   const data = await response.json();
 
   dispatch({

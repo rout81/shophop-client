@@ -52,7 +52,9 @@ const ProductScreen = ({ history, match }) => {
   }, [dispatch, match, successProductReview, product._id]);
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params.id}?qty=${qty}`);
+    history.push(
+      `https://stark-mesa-45698.herokuapp.com/cart/${match.params.id}?qty=${qty}`
+    );
   };
 
   const submitHandler = (e) => {
