@@ -42,12 +42,12 @@ const ProductListScreen = ({ history, match }) => {
     dispatch({ type: PRODUCT_CREATE_RESET });
 
     if (!userInfo || !userInfo.isAdmin) {
-      history.push("https://stark-mesa-45698.herokuapp.com/login");
+      history.push("https://shophop.netlify.app/login");
     }
 
     if (successCreate) {
       history.push(
-        `https://stark-mesa-45698.herokuapp.com/admin/product/${createdProduct._id}/edit`
+        `https://shophop.netlify.app/admin/product/${createdProduct._id}/edit`
       );
     } else {
       dispatch(listProducts("", pageNumber));

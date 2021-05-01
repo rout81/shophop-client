@@ -53,7 +53,7 @@ const ProductScreen = ({ history, match }) => {
 
   const addToCartHandler = () => {
     history.push(
-      `https://stark-mesa-45698.herokuapp.com/cart/${match.params.id}?qty=${qty}`
+      `https://shophop.netlify.app/cart/${match.params.id}?qty=${qty}`
     );
   };
 

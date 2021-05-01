@@ -31,7 +31,7 @@ export const listProducts = (keyword = "", pageNumber = "") => async (
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+      `https://shophop.netlify.app/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
     );
 
     dispatch({
@@ -54,7 +54,7 @@ export const listProductDetails = (id) => async (dispatch) => {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/products/${id}`
+      `https://shophop.netlify.app/api/products/${id}`
     );
 
     dispatch({
@@ -89,7 +89,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     };
 
     await axios.delete(
-      `https://stark-mesa-45698.herokuapp.com/api/products/${id}`,
+      `https://shophop.netlify.app/api/products/${id}`,
       config
     );
 
@@ -128,7 +128,7 @@ export const createProduct = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      `https://stark-mesa-45698.herokuapp.com/api/products`,
+      `https://shophop.netlify.app/api/products`,
       {},
       config
     );
@@ -170,7 +170,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `https://stark-mesa-45698.herokuapp.com/api/products/${product._id}`,
+      `https://shophop.netlify.app/api/products/${product._id}`,
       product,
       config
     );
@@ -216,7 +216,7 @@ export const createProductReview = (productId, review) => async (
     };
 
     await axios.post(
-      `https://stark-mesa-45698.herokuapp.com/api/products/${productId}/reviews`,
+      `https://shophop.netlify.app/api/products/${productId}/reviews`,
       review,
       config
     );
@@ -244,7 +244,7 @@ export const listTopProducts = () => async (dispatch) => {
     dispatch({ type: PRODUCT_TOP_REQUEST });
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/products/top`
+      `https://shophop.netlify.app/api/products/top`
     );
 
     dispatch({

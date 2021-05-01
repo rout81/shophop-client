@@ -20,7 +20,7 @@ const LoginScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(`https://stark-mesa-45698.herokuapp.com${redirect}`);
+      history.push(`https://shophop.netlify.app${redirect}`);
     }
   }, [history, userInfo, redirect]);
 

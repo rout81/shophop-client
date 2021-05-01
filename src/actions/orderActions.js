@@ -40,7 +40,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.post(
-      `https://stark-mesa-45698.herokuapp.com/api/orders`,
+      `https://shophop.netlify.app/api/orders`,
       order,
       config
     );
@@ -86,7 +86,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/orders/${id}`,
+      `https://shophop.netlify.app/api/orders/${id}`,
       config
     );
 
@@ -130,7 +130,7 @@ export const payOrder = (orderId, paymentResult) => async (
     };
 
     const { data } = await axios.put(
-      `https://stark-mesa-45698.herokuapp.com/api/orders/${orderId}/pay`,
+      `https://shophop.netlify.app/api/orders/${orderId}/pay`,
       paymentResult,
       config
     );
@@ -171,7 +171,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `https://stark-mesa-45698.herokuapp.com/api/orders/${order._id}/deliver`,
+      `https://shophop.netlify.app/api/orders/${order._id}/deliver`,
       {},
       config
     );
@@ -212,7 +212,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/orders/myorders`,
+      `https://shophop.netlify.app/api/orders/myorders`,
       config
     );
 
@@ -252,7 +252,7 @@ export const listOrders = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `https://stark-mesa-45698.herokuapp.com/api/orders`,
+      `https://shophop.netlify.app/api/orders`,
       config
     );
 

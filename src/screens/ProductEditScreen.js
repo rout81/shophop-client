@@ -36,7 +36,7 @@ const ProductEditScreen = ({ match, history }) => {
   useEffect(() => {
     if (successUpdate) {
       dispatch({ type: PRODUCT_UPDATE_RESET });
-      history.push("https://stark-mesa-45698.herokuapp.com/admin/productlist");
+      history.push("https://shophop.netlify.app/admin/productlist");
     } else {
       if (!product.name || product._id !== productId) {
         dispatch(listProductDetails(productId));
@@ -66,7 +66,7 @@ const ProductEditScreen = ({ match, history }) => {
       };
 
       const { data } = await axios.post(
-        "https://stark-mesa-45698.herokuapp.com/api/upload",
+        "https://shophop.netlify.app/api/upload",
         formData,
         config
       );

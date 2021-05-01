@@ -10,7 +10,7 @@ const PaymentScreen = ({ history }) => {
   const { shippingAddress } = cart;
 
   if (!shippingAddress.address) {
-    history.push("https://stark-mesa-45698.herokuapp.com/shipping");
+    history.push("https://shophop.netlify.app/shipping");
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
@@ -20,7 +20,7 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
-    history.push("https://stark-mesa-45698.herokuapp.com/placeorder");
+    history.push("https://shophop.netlify.app/placeorder");
   };
 
   return (

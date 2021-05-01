@@ -31,7 +31,7 @@ const ProfileScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push("https://stark-mesa-45698.herokuapp.com/login");
+      history.push("https://shophop.netlify.app/login");
     } else {
       if (!user || !user.name || success) {
         dispatch({ type: USER_UPDATE_PROFILE_RESET });

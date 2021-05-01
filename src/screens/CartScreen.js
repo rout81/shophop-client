@@ -34,9 +34,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   const checkoutHandler = () => {
-    history.push(
-      "https://stark-mesa-45698.herokuapp.com/login?redirect=shipping"
-    );
+    history.push("https://shophop.netlify.app/login?redirect=shipping");
   };
 
   return (
