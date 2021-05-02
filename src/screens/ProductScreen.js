@@ -53,7 +53,7 @@ const ProductScreen = ({ history, match }) => {
 
   const addToCartHandler = () => {
     history.push(
-      `https://shophop.netlify.app/cart/${match.params.id}?qty=${qty}`
+      `https://shopho.herokuapp.com/cart/${match.params.id}?qty=${qty}`
     );
   };
 

@@ -36,7 +36,7 @@ const ProductEditScreen = ({ match, history }) => {
   useEffect(() => {
     if (successUpdate) {
       dispatch({ type: PRODUCT_UPDATE_RESET });
-      history.push("https://shophop.netlify.app/admin/productlist");
+      history.push("https://shopho.herokuapp.com/admin/productlist");
     } else {
       if (!product.name || product._id !== productId) {
         dispatch(listProductDetails(productId));
@@ -66,7 +66,7 @@ const ProductEditScreen = ({ match, history }) => {
       };
 
       const { data } = await axios.post(
-        "https://shophop.netlify.app/api/upload",
+        "https://shopho.herokuapp.com/api/upload",
         formData,
         config
       );

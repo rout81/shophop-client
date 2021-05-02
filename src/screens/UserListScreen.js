@@ -22,7 +22,7 @@ const UserListScreen = ({ history }) => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {
-      history.push("https://shophop.netlify.app/login");
+      history.push("https://shopho.herokuapp.com/login");
     }
   }, [dispatch, history, successDelete, userInfo]);
 

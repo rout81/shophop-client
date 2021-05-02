@@ -14,9 +14,9 @@ const PlaceOrderScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
 
   if (!cart.shippingAddress.address) {
-    history.push("https://shophop.netlify.app/shipping");
+    history.push("https://shopho.herokuapp.com/shipping");
   } else if (!cart.paymentMethod) {
-    history.push("https://shophop.netlify.app/payment");
+    history.push("https://shopho.herokuapp.com/payment");
   }
   //   Calculate prices
   const addDecimals = (num) => {
@@ -39,7 +39,7 @@ const PlaceOrderScreen = ({ history }) => {
 
   useEffect(() => {
     if (success) {
-      history.push(`https://shophop.netlify.app/order/${order._id}`);
+      history.push(`https://shopho.herokuapp.com/order/${order._id}`);
       dispatch({ type: USER_DETAILS_RESET });
       dispatch({ type: ORDER_CREATE_RESET });
     }

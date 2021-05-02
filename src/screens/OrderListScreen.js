@@ -19,7 +19,7 @@ const OrderListScreen = ({ history }) => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listOrders());
     } else {
-      history.push("https://shophop.netlify.app/login");
+      history.push("https://shopho.herokuapp.com/login");
     }
   }, [dispatch, history, userInfo]);
 

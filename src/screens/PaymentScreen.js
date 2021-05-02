@@ -10,7 +10,7 @@ const PaymentScreen = ({ history }) => {
   const { shippingAddress } = cart;
 
   if (!shippingAddress.address) {
-    history.push("https://shophop.netlify.app/shipping");
+    history.push("https://shopho.herokuapp.com/shipping");
   }
 
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
@@ -20,7 +20,7 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
-    history.push("https://shophop.netlify.app/placeorder");
+    history.push("https://shopho.herokuapp.com/placeorder");
   };
 
   return (

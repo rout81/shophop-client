@@ -48,12 +48,12 @@ const OrderScreen = ({ match, history }) => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push("https://shophop.netlify.app/login");
+      history.push("https://shopho.herokuapp.com/login");
     }
 
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get(
-        "https://shophop.netlify.app/api/config/paypal"
+        "https://shopho.herokuapp.com/api/config/paypal"
       );
       const script = document.createElement("script");
       script.type = "text/javascript";

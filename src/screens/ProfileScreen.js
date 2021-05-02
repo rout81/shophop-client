@@ -31,7 +31,7 @@ const ProfileScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push("https://shophop.netlify.app/login");
+      history.push("https://shopho.herokuapp.com/login");
     } else {
       if (!user || !user.name || success) {
         dispatch({ type: USER_UPDATE_PROFILE_RESET });

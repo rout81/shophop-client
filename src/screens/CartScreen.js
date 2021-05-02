@@ -34,7 +34,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   const checkoutHandler = () => {
-    history.push("https://shophop.netlify.app/login?redirect=shipping");
+    history.push("https://shopho.herokuapp.com/login?redirect=shipping");
   };
 
   return (

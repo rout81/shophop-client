@@ -40,7 +40,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://shophop.netlify.app/api/users/login",
+      "https://shopho.herokuapp.com/api/users/login",
       { email, password },
       config
     );
@@ -87,7 +87,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://shophop.netlify.app/api/users",
+      "https://shopho.herokuapp.com/api/users",
       { name, email, password },
       config
     );
@@ -131,7 +131,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `https://shophop.netlify.app/api/users/${id}`,
+      `https://shopho.herokuapp.com/api/users/${id}`,
       config
     );
 
@@ -172,7 +172,7 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `https://shophop.netlify.app/api/users/profile`,
+      `https://shopho.herokuapp.com/api/users/profile`,
       user,
       config
     );
@@ -218,7 +218,7 @@ export const listUsers = () => async (dispatch, getState) => {
     };
 
     const { data } = await axios.get(
-      `https://shophop.netlify.app/api/users`,
+      `https://shopho.herokuapp.com/api/users`,
       config
     );
 
@@ -257,7 +257,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
       },
     };
 
-    await axios.delete(`https://shophop.netlify.app/api/users/${id}`, config);
+    await axios.delete(`https://shopho.herokuapp.com/api/users/${id}`, config);
 
     dispatch({ type: USER_DELETE_SUCCESS });
   } catch (error) {
@@ -293,7 +293,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `https://shophop.netlify.app/api/users/${user._id}`,
+      `https://shopho.herokuapp.com/api/users/${user._id}`,
       user,
       config
     );

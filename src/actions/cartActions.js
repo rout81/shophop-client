@@ -8,7 +8,7 @@ import {
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   const { data } = await axios.get(
-    `https://shophop.netlify.app/api/products/${id}`
+    `https://shopho.herokuapp.com/api/products/${id}`
   );
 
   dispatch({

@@ -42,12 +42,12 @@ const ProductListScreen = ({ history, match }) => {
     dispatch({ type: PRODUCT_CREATE_RESET });
 
     if (!userInfo || !userInfo.isAdmin) {
-      history.push("https://shophop.netlify.app/login");
+      history.push("https://shopho.herokuapp.com/login");
     }
 
     if (successCreate) {
       history.push(
-        `https://shophop.netlify.app/admin/product/${createdProduct._id}/edit`
+        `https://shopho.herokuapp.com/admin/product/${createdProduct._id}/edit`
       );
     } else {
       dispatch(listProducts("", pageNumber));

@@ -23,7 +23,7 @@ const RegisterScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(`https://shophop.netlify.app${redirect}`);
+      history.push(`https://shopho.herokuapp.com${redirect}`);
     }
   }, [history, userInfo, redirect]);
 
