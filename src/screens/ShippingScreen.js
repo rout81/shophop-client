@@ -19,7 +19,7 @@ const ShippingScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postalCode, country }));
-    history.push("https://shopho.herokuapp.com/payment");
+    history.push("/payment");
   };
 
   return (

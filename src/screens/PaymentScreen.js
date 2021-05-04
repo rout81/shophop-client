@@ -20,7 +20,7 @@ const PaymentScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(savePaymentMethod(paymentMethod));
-    history.push("https://shopho.herokuapp.com/placeorder");
+    history.push("/placeorder");
   };
 
   return (

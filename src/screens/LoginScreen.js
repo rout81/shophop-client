@@ -20,7 +20,7 @@ const LoginScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(`https://shopho.herokuapp.com${redirect}`);
+      history.push(`/${redirect}`);
     }
   }, [history, userInfo, redirect]);
 

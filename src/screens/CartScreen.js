@@ -34,7 +34,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   const checkoutHandler = () => {
-    history.push("https://shopho.herokuapp.com/login?redirect=shipping");
+    history.push("/login?redirect=shipping");
   };
 
   return (
