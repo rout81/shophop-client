@@ -20,9 +20,11 @@ const LoginScreen = ({ location, history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      history.push(`/${redirect}`);
+      console.log(location.search);
+      console.log(redirect);
+      history.push(redirect);
     }
-  }, [history, userInfo, redirect]);
+  }, [history, userInfo, redirect, location.search]);
 
   const submitHandler = (e) => {
     e.preventDefault();
